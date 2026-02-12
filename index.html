@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+	<head>
+		<meta charset="UTF-8">
+		<title>Tida | HomePage</title>
+		<link rel="stylesheet" href="style.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+		<div class="loading-screen" id="loadingScreen">
+        	<div class="loader-ring"></div>
+        	<div class="loading-text">صبور باشید ...</div>
+   		 </div>
+		<section class="navbar-sec">
+			<div class="navbar">
+				<div class="nav-buttons">
+					<input type="button" class="logo" id="logo-btn" value="تـــیـدا">
+					<input type="button" class="nav-btn" onclick="HomeGo();" id="home" value="صفحه اصلی">
+					<input type="button" class="nav-btn" id="store" value="فروشگاه">
+					<input type="button" class="nav-btn" onclick="AboutGo();" id="about" value="درباره ما">
+					<input type="button" class="nav-btn" onclick="WeblogGo();" id="wlogbtn" value="وبلاگ ها">
+					<div class="container-nav-icon">
+					<svg id="nav-icon1" class="nav-icon" onclick="HomeGo();" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M20 17.0002V11.4522C20 10.9179 19.9995 10.6506 19.9346 10.4019C19.877 10.1816 19.7825 9.97307 19.6546 9.78464C19.5102 9.57201 19.3096 9.39569 18.9074 9.04383L14.1074 4.84383C13.3608 4.19054 12.9875 3.86406 12.5674 3.73982C12.1972 3.63035 11.8026 3.63035 11.4324 3.73982C11.0126 3.86397 10.6398 4.19014 9.89436 4.84244L5.09277 9.04383C4.69064 9.39569 4.49004 9.57201 4.3457 9.78464C4.21779 9.97307 4.12255 10.1816 4.06497 10.4019C4 10.6506 4 10.9179 4 11.4522V17.0002C4 17.932 4 18.3978 4.15224 18.7654C4.35523 19.2554 4.74432 19.6452 5.23438 19.8482C5.60192 20.0005 6.06786 20.0005 6.99974 20.0005C7.93163 20.0005 8.39808 20.0005 8.76562 19.8482C9.25568 19.6452 9.64467 19.2555 9.84766 18.7654C9.9999 18.3979 10 17.932 10 17.0001V16.0001C10 14.8955 10.8954 14.0001 12 14.0001C13.1046 14.0001 14 14.8955 14 16.0001V17.0001C14 17.932 14 18.3979 14.1522 18.7654C14.3552 19.2555 14.7443 19.6452 15.2344 19.8482C15.6019 20.0005 16.0679 20.0005 16.9997 20.0005C17.9316 20.0005 18.3981 20.0005 18.7656 19.8482C19.2557 19.6452 19.6447 19.2554 19.8477 18.7654C19.9999 18.3978 20 17.932 20 17.0002Z" stroke="#3C3C43" stroke-opacity="0.6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+					<svg id="nav-icon4" class="nav-icon" onclick="WeblogGo();" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9 17H15M9 14H15M13.0004 3.00087C12.9048 3 12.7974 3 12.6747 3H8.2002C7.08009 3 6.51962 3 6.0918 3.21799C5.71547 3.40973 5.40973 3.71547 5.21799 4.0918C5 4.51962 5 5.08009 5 6.2002V17.8002C5 18.9203 5 19.4801 5.21799 19.9079C5.40973 20.2842 5.71547 20.5905 6.0918 20.7822C6.51921 21 7.079 21 8.19694 21L15.8031 21C16.921 21 17.48 21 17.9074 20.7822C18.2837 20.5905 18.5905 20.2842 18.7822 19.9079C19 19.4805 19 18.9215 19 17.8036V9.32568C19 9.20302 18.9999 9.09553 18.999 9M13.0004 3.00087C13.2858 3.00348 13.4657 3.01407 13.6382 3.05547C13.8423 3.10446 14.0379 3.18526 14.2168 3.29492C14.4186 3.41857 14.5918 3.59181 14.9375 3.9375L18.063 7.06298C18.4089 7.40889 18.5809 7.58136 18.7046 7.78319C18.8142 7.96214 18.8953 8.15726 18.9443 8.36133C18.9857 8.53379 18.9964 8.71454 18.999 9M13.0004 3.00087L13 5.80021C13 6.92031 13 7.48015 13.218 7.90797C13.4097 8.2843 13.7155 8.59048 14.0918 8.78223C14.5192 9 15.079 9 16.1969 9H18.999" stroke="#3C3C43" stroke-opacity="0.6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+					<svg id="nav-icon2" class="nav-icon" href="" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3 3H3.26835C3.74213 3 3.97943 3 4.17267 3.08548C4.34304 3.16084 4.48871 3.28218 4.59375 3.43604C4.71269 3.61026 4.75564 3.8429 4.84137 4.30727L7.00004 16L17.4218 16C17.875 16 18.1023 16 18.29 15.9199C18.4559 15.8492 18.5989 15.7346 18.7051 15.5889C18.8252 15.4242 18.8761 15.2037 18.9777 14.7631L18.9785 14.76L20.5477 7.95996L20.5481 7.95854C20.7023 7.29016 20.7796 6.95515 20.6947 6.69238C20.6202 6.46182 20.4635 6.26634 20.2556 6.14192C20.0184 6 19.6758 6 18.9887 6H5.5M18 21C17.4477 21 17 20.5523 17 20C17 19.4477 17.4477 19 18 19C18.5523 19 19 19.4477 19 20C19 20.5523 18.5523 21 18 21ZM8 21C7.44772 21 7 20.5523 7 20C7 19.4477 7.44772 19 8 19C8.55228 19 9 19.4477 9 20C9 20.5523 8.55228 21 8 21Z" stroke="#3C3C43" stroke-opacity="0.6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+					<svg id="nav-icon3" class="nav-icon" onclick="AboutGo();" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15 9L11 13L9 11M20 10.165C20 16.7333 15.0319 19.6781 12.9258 20.6314L12.9231 20.6325C12.7016 20.7328 12.5906 20.7831 12.3389 20.8263C12.1795 20.8537 11.8215 20.8537 11.6621 20.8263C11.4094 20.7829 11.2972 20.7325 11.074 20.6314C8.9678 19.6781 4 16.7333 4 10.165V6.2002C4 5.08009 4 4.51962 4.21799 4.0918C4.40973 3.71547 4.71547 3.40973 5.0918 3.21799C5.51962 3 6.08009 3 7.2002 3H16.8002C17.9203 3 18.4796 3 18.9074 3.21799C19.2837 3.40973 19.5905 3.71547 19.7822 4.0918C20 4.5192 20 5.07899 20 6.19691V10.165Z" stroke="#3C3C43" stroke-opacity="0.6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="hero-sec">
+			<div class="hero-bg" id="hero">
+				<h1 class="hero-title">فــروشــگاه تــیــدا</h1>
+				<p  class="hero-subtitle">کالـکـشنی از دست سـازه ها</p>
+				<img class="img-hero" src="image/hero-img.png">
+			</div>
+		</section>
+		<section class="store-sec">
+			<h1 class="title">مـحـصـولات</h1>
+			<div class="filter-buttons" id="filtercontainer">
+                <button class="filter-btn" id="filter-btn1">
+					<img class="filter-img" src="image/filter-lether.png">
+					<p class="filter-text">چـرم</p>
+				</button>
+                <button class="filter-btn">
+					<img class="filter-img" src="image/none.jpg">
+					<p class="filter-text">رزین</p>
+				</button>
+                <button class="filter-btn">
+					<img class="filter-img" src="image/filter-candle.png">
+					<p class="filter-text">شمع ها</p>					
+				</button>
+                <button id="5btn" class="filter-btn">
+					<img class="filter-img" src="image/none.jpg">
+					<p class="filter-text">سنگ مصنوعی</p>
+				</button>
+			</div>
+		</section>
+		<section class="aboutus-sec">
+			<div class="about-bg">
+				<h1 class="about-title">دست سازه های تیدا</h1>
+				<p class="about-text">مجموعه تیدا یه مجموعه بسیار بزرگه که با دست سازه هاش قراره دلتو ببره. مطمئن باش بعد از اولین خریدت متوجهش میشی... تیم تیدا با سابقه چندین ساله در ساخت و تولید دستسازه قراره هنرشو به خونه یا محل کارتون بیاره.</p>
+				<img class="about-img" src="image/none.jpg">
+			</div>
+		</section>
+		<section class="newp-sec">
+			<h1 class="title" id="newp-title">جــدیدتریـن ها<h1>
+			<div class="container-grid">
+				<div class="p-card" id="p-card1">
+					<img class="img-p" src="image/none.jpg">
+					<p class="newp-info">شمع دکوراتیو</p>
+					<p class="newp-price">150,000 تومان</p>
+				</div>
+				<div class="p-card" id="p-card2">
+					<img class="img-p" src="image/none.jpg">
+					<p class="newp-info">شمع دکوراتیو</p>
+					<p class="newp-price">150,000 تومان</p>
+				</div>
+				<div class="p-card" id="p-card3">
+					<img class="img-p" src="image/none.jpg">
+					<p class="newp-info">شمع دکوراتیو</p>
+					<p class="newp-price">150,000 تومان</p>
+				</div>
+				<div class="p-card" id="p-card4">
+					<img class="img-p" src="image/none.jpg">
+					<p class="newp-info">شمع دکوراتیو</p>
+					<p class="newp-price">150,000 تومان</p>
+				</div>
+				<div class="p-card" id="p-card5">
+					<img class="img-p" src="image/none.jpg">
+					<p class="newp-info">شمع دکوراتیو</p>
+					<p class="newp-price">150,000 تومان</p>
+				</div>
+				<div class="p-card" id="p-card6">
+					<img class="img-p" src="image/none.jpg">
+					<p class="newp-info">شمع دکوراتیو</p>
+					<p class="newp-price">150,000 تومان</p>
+				</div>
+			</div>
+		</section>
+		<section class="weblogsec">
+			<h1 class="title" id="title3">وبلاگ ها</h1>
+			<div class="container-grid-weblog">
+				<div class="weblog-card" id="weblog-card1" href="">
+					<p class="go-flash"><</p>
+					<img class="img-weblog" src="image/wlog1.png">
+				</div>
+				<div class="weblog-card" id="weblog-card2" href="">
+					<p class="go-flash"><</p>
+					<img class="img-weblog" src="image/wlog2.png">
+				</div>
+				<div class="weblog-card" id="weblog-card3" href="">
+					<p class="go-flash"><</p>
+					<img class="img-weblog" src="image/wlog3.png">
+				</div>
+				<div class="weblog-card" id="weblog-card4" href="">
+					<p class="go-flash"><</p>
+					<img class="img-weblog" src="image/wlog4.png">
+				</div>
+			</div>
+		</section>
+		<section class="faq">
+			<h1 class="title" id="title3">سوالات متداول</h1>
+			<details class="question-bar">
+				<summary class="question" id="q1">چرا باید از شما خرید کنیم؟</summary>
+				<p class="answer" id="a">تیم ما با سابقه چند ساله میتونه محصولات با کیفیت بالا برای شما تولید کنه</p>
+			</details>
+			<details class="question-bar">
+				<summary class="question" id="q2">چرا باید از شما خرید کنیم؟</summary>
+				<p class="answer" id="a">تیم ما با سابقه چند ساله میتوه محصولات با کیفیت بالا برای شما تولید کنه</p>
+			</details>
+			<details class="question-bar">
+				<summary class="question" id="q3">چرا باید از شما خرید کنیم؟</summary>
+				<p class="answer" id="a">تیم ما با سابقه چند ساله میتوه محصولات با کیفیت بالا برای شما تولید کنه</p>
+			</details>
+			<details class="question-bar">
+				<summary class="question" id="q4">چرا باید از شما خرید کنیم؟</summary>
+				<p class="answer" id="a">تیم ما با سابقه چند ساله میتوه محصولات با کیفیت بالا برای شما تولید کنه</p>
+			</details>
+		</section>
+		<section class="contactus-sec">
+			<h1 class="title" id="title4">ارتباط با ما</h1>
+			<div class="container-contact">
+				<div class="contact-item" id="instagram" href="">
+					<p class="contact-txt">اینستاگرام</p>
+				</div>
+				<div class="contact-item" id="telegram" href="">
+					<p class="contact-txt">تلگرام</p>
+				</div>
+				<div class="contact-item" id="support" onclick='location.href="NotActive/index.html";'>
+					<p class="contact-txt">پشتیبانی</p>
+				</div>	
+			</div>
+		</section>
+		<section class="footer">
+			<div class="footer-bg">
+			<div class="footer-grid">
+				<div class="easy-bar">
+					<h1 class="footer-title" id="aboutus-title-footer">درباره ما</h1>
+					<p class="about-text-footer">تیم دست سازه های تیدا با چندین سال سابقه در تولید اکسسوری</p>
+				</div>
+				<div class="easy-bar">
+					<h1 class="footer-title" id="easy-bar-title">دسترسی سریع</h1>
+						<a id="e-btn" onclick="HomeGo();" class="easy-btn">صفحه اصلی</a>
+						<a id="e-btn" href="" class="easy-btn">فروشگاه</a>
+						<a id="e-btn" onclick="AboutGo();" class="easy-btn">درباره ما</a>
+						<a id="e-btn" onclick="WeblogGo();" class="easy-btn">وبلاگ ها</a>
+				</div>
+				<div class="easy-bar">
+					<h1 class="footer-title" id="customer-sup-title">خدمات مشتریان</h1>
+						<a id="c-btn" onclick='location.href="NotActive/index.html";' class="easy-btn">پشتیبانی</a>
+						<a id="c-btn" href="" class="easy-btn">خرید محصول</a>
+						<a id="c-btn" onclick="ContactGo();" class="easy-btn">ارتباط با ما</a>
+						<a id="c-btn" onclick="QGo();" class="easy-btn">سوالات متداول</a>
+				</div>
+			</div>
+				<hr class="space-footer">
+						<p class="copy-right">طراحی توسط تیم تیدا - تمامی حقوق محفوظ است</p>
+		</section>
+		<script src="script.js"></script>
+	</body>
+</html>

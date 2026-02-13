@@ -247,6 +247,10 @@
     src: local('onguhtqqkpydgqbvjjfwctmthaikrqjfwncs'), url(https://sitetesttemplate03.see5.net/wp-content/uploads/IRANSansFaNum_Black.ttf) format('truetype');
 }
 
+:root {
+	color-scheme:only light;
+}
+
 body {
 	user-select:none;
 	font-family: 'wfiijpfqfmhabqtcwbckbvqvxfqrcxwmmenz';
@@ -1429,4 +1433,3 @@ a {
 		font-size:10px;
 	}
 }
-

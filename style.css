@@ -1169,7 +1169,7 @@ a {
 		border-radius:14px;
 		height:50px;
 		position:fixed;
-		margin-top:587px;
+		margin-top:610px;
 		margin-right:3.15%;
 		margin-left:4.35%;
 		border-bottom: 1px solid rgb(167, 167, 167);
@@ -1375,7 +1375,7 @@ a {
 
 @media (max-width:330px) {
 	.navbar {
-		margin-top:590px;
+		margin-top:610px;
 	}
 
 	.filter-text {

@@ -138,3 +138,55 @@ body {
     border-radius:16px;
     align-content: center;
 }
+
+@media (max-width:3000px) {
+    .background-na {
+        font-size:30px;
+    }
+}
+
+@media (max-width:1200px) {
+    .background-na {
+        font-size:20px;
+    }
+}
+
+@media (max-width:900px) {
+    .background-na {
+        font-size:18px;
+    }
+}
+
+@media (max-width:800px) {
+    .background-na {
+        width:90%;
+        margin-right:5%;
+        margin-left:5%;
+    }
+}
+
+@media (max-width:600px) {
+    .background-na {
+        font-size:16px;
+    }
+}
+
+@media (max-width:520px) {
+    .background-na {
+        height:200px;
+        font-size:14px;
+    }
+}
+
+@media (max-width:420px) {
+    .background-na {
+        font-size:10px;
+        height:100px;
+    }
+}
+
+@media (max-width:350px) {
+    .background-na {
+        font-size:8px;
+    }
+}

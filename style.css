@@ -1375,7 +1375,7 @@ a {
 
 @media (max-width:330px) {
 	.navbar {
-		margin-top:610px;
+		margin-top:800px;
 	}
 
 	.filter-text {
@@ -1429,3 +1429,4 @@ a {
 		font-size:10px;
 	}
 }
+

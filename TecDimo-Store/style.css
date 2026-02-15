@@ -530,7 +530,7 @@ html {
     }
 
     .p-card-container {
-        height:255px;
+        height:260px;
     }
 
     .filter-buttons {
@@ -553,11 +553,13 @@ html {
     .more-info {
         height:25px;
         font-size:12px;
+		border-bottom:3px;
     }
 
     .buy-btn {
         height:25px;
         font-size:12px;
+		border-bottom:3px;
     }
 
     .p-title {
@@ -569,5 +571,6 @@ html {
     }
 
 }
+
 
 

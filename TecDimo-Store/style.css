@@ -526,11 +526,11 @@ html {
     .p-grid {
         grid-template-columns: repeat(2, 1fr);
         margin-top:20px;
-        margin-bottom:100px;
+        margin-bottom:150px;
     }
 
     .p-card-container {
-        height:265px;
+        height:250px;
     }
 
     .filter-buttons {
@@ -569,3 +569,4 @@ html {
     }
 
 }
+
